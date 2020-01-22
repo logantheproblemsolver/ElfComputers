@@ -52,10 +52,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
             <CustomizationList features={this.props.features} currency={USCurrencyFormat} updateFeature={this.updateFeature} selected={this.state.selected} />
-          </form>
           <section className="main__summary">
             <h2>Your cart</h2>
             <Cart features={this.props.features} selected={this.state.selected} currency={USCurrencyFormat} />
