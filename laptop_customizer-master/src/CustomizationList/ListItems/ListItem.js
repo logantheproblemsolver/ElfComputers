@@ -22,23 +22,23 @@ class ListItem extends React.Component {
                     onChange={e => this.props.updateFeature(feature, item)}
                   />
                   <label htmlFor={itemHash} className="feature__label">
-                    {item.name} ({currency.format(item.cost)})
+                    {item.name}
+                     {/* ({currency.format(item.cost)}) */}
                   </label>
                 </div>
               );
             });
-        
-            return (
-              <fieldset className="feature" key={featureHash}>
-                <legend className="feature__name">
-                  <h3>{feature}</h3>
-                </legend>
-                {options}
-              </fieldset>
-            );
+          return (
+            <fieldset className="feature" key={featureHash}>
+              <legend className="feature__name">
+                <h3>{features}</h3>
+              </legend>
+              {options}
+            </fieldset>
+          );
+
           });
     }
-
     render() {
         return (
             <div>

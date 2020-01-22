@@ -3,9 +3,6 @@ import CustomizationList from './CustomizationList/CustomizationList'
 import Cart from './Cart/Cart'
 
 
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-import slugify from 'slugify';
 
 import './App.css';
 
@@ -57,7 +54,7 @@ class App extends Component {
         <main>
           <form className="main__form">
             <h2>Customize your laptop</h2>
-            <CustomizationList features={this.props.features} currency={this.USCurrencyFormat} updateFeature={this.updateFeature} />
+            <CustomizationList features={this.props.features} currency={this.USCurrencyFormat} updateFeature={this.updateFeature} selected={this.state.selected} />
           </form>
           <section className="main__summary">
             <h2>Your cart</h2>
