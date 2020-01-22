@@ -58,7 +58,7 @@ class App extends Component {
           </form>
           <section className="main__summary">
             <h2>Your cart</h2>
-            <Cart features={this.props.features} selected={this.state.selected} currency={this.USCurrencyFormat} />
+            <Cart features={this.props.features} selected={this.state.selected} currency={USCurrencyFormat} />
 
           </section>
         </main>

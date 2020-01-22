@@ -9,8 +9,8 @@ class CustomizationList extends React.Component {
     render() {
     
         return (
-            <div class="CustomizationList">
-                <ListItem features={this.props.features} currency={this.props.USCurrencyFormat} updateFeature={this.props.updateFeature} selected={this.props.selected} />
+            <div className="CustomizationList">
+                <ListItem features={this.props.features} currency={this.props.currency} updateFeature={this.props.updateFeature} selected={this.props.selected} />
             </div>
         )
     }
