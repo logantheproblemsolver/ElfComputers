@@ -2,11 +2,13 @@ import React from 'react';
 import slugify from 'slugify';
 
 
+
 class ListItem extends React.Component {
     
+  
     generateList = () => {
         const updateFeature = this.props.updateFeature
-        const currency = this.props.USCurrencyFormat
+        const currency = this.props.currency
         const features = Object.keys(this.props.features).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             const options = this.props.features[feature].map(item => {
@@ -23,7 +25,7 @@ class ListItem extends React.Component {
                   />
                   <label htmlFor={itemHash} className="feature__label">
                     {item.name}
-                     {/* ({currency.format(item.cost)}) */}
+                     ({currency.format(item.cost)})
                   </label>
                 </div>
               );
@@ -38,11 +40,12 @@ class ListItem extends React.Component {
           );
 
           });
-    }
+    return features
+        }
     render() {
         return (
-            <div>
-                {this.generateList()}
+            <div className="ListItem">
+              {this.generateList()}
             </div>
         )
     }

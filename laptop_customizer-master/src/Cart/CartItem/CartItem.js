@@ -32,7 +32,7 @@ class CartItem extends Component {
               </div>
             );
           });
-        
+        return summary
     }
 
     render() {
