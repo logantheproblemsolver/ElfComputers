@@ -1,5 +1,4 @@
 import React from 'react';
-import slugify from 'slugify';
 import ListItem from './ListItems/ListItem'
 
 

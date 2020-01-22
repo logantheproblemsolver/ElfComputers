@@ -7,7 +7,6 @@ class ListItem extends React.Component {
     
   
     generateList = () => {
-        const updateFeature = this.props.updateFeature
         const currency = this.props.currency
         console.log(currency)
         const features = Object.keys(this.props.features).map((feature, idx) => {
